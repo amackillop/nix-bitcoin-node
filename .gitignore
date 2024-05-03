@@ -1,0 +1,8 @@
+.*
+
+secrets/
+localBackups/
+
+!.envrc
+
+!.git*
