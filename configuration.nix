@@ -42,7 +42,7 @@
   #
   # You can add options that are not defined in modules/bitcoind.nix as follows
   services.bitcoind.extraConfig = ''
-    dbcache=24576
+  
   '';
 
   ### CLIGHTNING
@@ -152,7 +152,7 @@
 
   ### ELECTRS
   # Set this to enable electrs, an Electrum server implemented in Rust.
-  # services.electrs.enable = true;
+  services.electrs.enable = true;
 
   ### FULCRUM
   # Set this to enable fulcrum, an Electrum server implemented in C++.
@@ -300,7 +300,7 @@
   users.users.root = {
     openssh.authorizedKeys.keys = [
       # FIXME: Replace this with your SSH pubkey
-      (builtins.readFile ~/.ssh/id_ed25519.pub)
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKj473/+eAlgy1rQwuO+nCRrqhiPAWEgYPIn5j/NdN1Q"
     ];
   };
 
